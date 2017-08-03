@@ -9,7 +9,7 @@
 
 #import "RCTJSCExecutor.h"
 
-#import <cinttypes>
+//#import <cinttypes>
 #import <memory>
 #import <pthread.h>
 #import <string>
@@ -36,6 +36,8 @@
 #if (RCT_PROFILE || RCT_DEV) && __has_include("RCTDevMenu.h")
 #import "RCTDevMenu.h"
 #endif
+
+#define PRIu32 "lu"
 
 NSString *const RCTJSCThreadName = @"com.facebook.react.JavaScript";
 NSString *const RCTJavaScriptContextCreatedNotification = @"RCTJavaScriptContextCreatedNotification";
